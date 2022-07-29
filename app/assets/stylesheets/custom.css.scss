@@ -1,0 +1,14 @@
+@import "bootstrap";
+// @import "bootstrap-sprockets";
+
+#logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.nav-item a{
+    color: white;
+}
+.nav-item a:hover{
+    color: gray;
+}

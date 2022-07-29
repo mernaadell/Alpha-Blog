@@ -1,0 +1,26 @@
+<h1>Articles</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">title</th>
+      <th scope="col">description</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+    <tr>
+      <th scope="row"><%=article.id%></th>
+      <td><%= article.title%></td>
+       <td><%= article.description%></td>
+       <td><%= link_to ' Delete Article' ,article_path(article),method: "delete" %></td>
+           <td><%= link_to ' Edit Article' ,edit_article_path(article),method: "get" %></td>
+             <td><%= link_to ' show Article' ,article_path(article),method: "get" %></td>
+      
+    </tr>
+      <% end %>
+  
+  </tbody>
+</table>
